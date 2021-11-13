@@ -1,10 +1,31 @@
 .upload-zone {
+    display: inline-block;
     width: 400px;
     height: 400px;
-    border: 5px dashed gray;
+    border: 5px dashed #faa;
     border-radius: 1em;
+    transition: all 0.3s;
+    text-align: center;
+    position: relative;
+
+    @media (max-width: 996px) {
+        width: 100%;
+    }
 
     &.active {
         border-color: red;
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .placeholder {
+            color: #bbb;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
     }
 }

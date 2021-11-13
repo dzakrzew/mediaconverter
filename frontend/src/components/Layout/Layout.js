@@ -1,10 +1,13 @@
-import { Navbar } from "../Navbar"
+import { Navbar } from "../Navbar";
+import "./Layout.scss";
 
 export const Layout = ({ children }) => {
     return (
         <div className="app">
             <Navbar />
-            {children}
+            <div className="container text-center">
+                {children}
+            </div>
         </div>
     );
 };
